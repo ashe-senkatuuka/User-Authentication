@@ -30,7 +30,8 @@ router.post('/users/register', (req, res) => {
     });
     User.createUser(newUser, (error, user) => {
         if (error) { console.log(error); }
-        res.send({ user });
+        // res.send({ user });
+        res.redirect('/users/login')
     });
 });
 
